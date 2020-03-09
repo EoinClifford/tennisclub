@@ -41,3 +41,5 @@ Route::resource('bookings', 'bookingController');
 
 
 Route::resource('membershiptypes', 'membershiptypeController');
+
+Route::get('/loggedInMember','memberController@getLoggedInMemberDetails');
