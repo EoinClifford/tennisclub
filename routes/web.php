@@ -13,7 +13,7 @@
 
 Route::get('/', function () {
     return view('welcome');
-});
+});  
 
 Route::get('/home','memberController@index')->name('home');
 Route::get('logout', 'Auth\LoginController@logout')->name('logout');
@@ -38,8 +38,11 @@ Route::resource('courts', 'courtController');
 
 Route::resource('bookings', 'bookingController');
 
-
+Route::get('/courtratings/ratecourt/{court}','courtratingController@ratecourt')->name('courtratings.ratecourt');
 
 Route::resource('membershiptypes', 'membershiptypeController');
 
 Route::get('/loggedInMember','memberController@getLoggedInMemberDetails');
+
+
+Route::resource('courtratings', 'courtratingController');
