@@ -40,6 +40,8 @@ Route::resource('bookings', 'bookingController');
 
 Route::get('/courtratings/ratecourt/{court}','courtratingController@ratecourt')->name('courtratings.ratecourt');
 
+Route::get('/courtratings/court/{court}','courtratingController@showcourtratings')->name('courtratings.showcourtratings');
+
 Route::resource('membershiptypes', 'membershiptypeController');
 
 Route::get('/loggedInMember','memberController@getLoggedInMemberDetails');
